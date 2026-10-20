@@ -57,7 +57,12 @@ header[data-testid="stHeader"] { background: transparent; }
 .sec-desc { color: #55504a; margin: 0 0 1.4rem 3.4rem; font-size: 1rem; }
 .fieldlab { font-weight: 700; font-size: 0.92rem; color: #2f2b27; margin-bottom: 0.3rem; }
 
-textarea { background: #fffaf0 !important; border: 1px solid #ecdfbd !important; border-radius: 8px !important; }
+textarea { background: #fffaf0 !important; color: #2a2623 !important; -webkit-text-fill-color: #2a2623 !important; caret-color: #c0503a !important; border: 1px solid #ecdfbd !important; border-radius: 8px !important; }
+textarea::placeholder { color: #9a8f7a !important; -webkit-text-fill-color: #9a8f7a !important; opacity: 1 !important; }
+[data-baseweb="textarea"], [data-baseweb="textarea"] > div { background: #fffaf0 !important; }
+[data-baseweb="select"] div, [data-baseweb="select"] span, [data-baseweb="select"] input { color: #2a2623 !important; -webkit-text-fill-color: #2a2623 !important; }
+[data-testid="stFileUploaderDropzone"] * { color: #3b3a30 !important; }
+[data-testid="stCaptionContainer"], .stMarkdown, .stMarkdown p, label p { color: #2f2b27; }
 textarea:focus { border-color: #c0503a !important; box-shadow: 0 0 0 2px rgba(192,80,58,.2) !important; }
 
 /* example chips */
