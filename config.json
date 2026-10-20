@@ -1,0 +1,1 @@
+{"max_length": 200, "vocab_size": 20000, "best_model": "BiLSTM_trainable", "models": ["LSTM_trainable", "LSTM_glove", "BiLSTM_trainable", "BiLSTM_glove", "GRU_trainable", "GRU_glove"]}
