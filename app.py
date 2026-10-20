@@ -39,6 +39,10 @@ header[data-testid="stHeader"] { background: transparent; }
 .eyebrow { color: #f0b83a; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; }
 .hero h1 { font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 3.2rem; line-height: 1.1; color: #fff; margin: 0.9rem 0 0.9rem 0; padding: 0; }
 .hero p { color: #fbe9e3; font-size: 1rem; margin: 0; }
+.hero-in { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
+.hero-text { flex: 1 1 420px; }
+.logo { background: #ffffff; border-radius: 12px; padding: 0.7rem 1.1rem 0.5rem 1.1rem; box-shadow: 0 4px 14px rgba(80,30,10,.3); flex: 0 0 auto; }
+.logo svg { width: 150px; height: auto; display: block; }
 .stripe { height: 11px; background: linear-gradient(90deg, #e0b13a 0 33.3%, #4a8a60 33.3% 66.6%, #e0b13a 66.6% 100%); }
 
 /* model card */
@@ -134,11 +138,21 @@ def get_model(name):
 tokenizer = get_tokenizer()
 
 # ---------- Hero ----------
+LOGO = (
+    '<div class="logo"><svg viewBox="0 0 150 62" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="amazon">'
+    '<text x="4" y="34" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="34" '
+    'fill="#232f3e" textLength="136" lengthAdjust="spacingAndGlyphs">amazon</text>'
+    '<path d="M20 43 Q70 62 118 41" fill="none" stroke="#ff9900" stroke-width="4.5" stroke-linecap="round"/>'
+    '<path d="M110 37 L120 41 L112 48" fill="none" stroke="#ff9900" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>'
+    '</svg></div>'
+)
 st.markdown(
-    '<div class="hero"><div class="hero-in"><div class="eyebrow">Customer Review Sentiment Analysis</div>'
-    '<h1>Reading what customers say</h1>'
+    '<div class="hero"><div class="hero-in"><div class="hero-text">'
+    "<div class=\"eyebrow\">Amazon's Customer Review Sentiment Analysis</div>"
+    '<h1>Reading what Amazon customers say</h1>'
     '<p>Classifies reviews as Negative, Neutral, or Positive using a recurrent neural network.</p></div>'
-    '<div class="stripe"></div></div>', unsafe_allow_html=True)
+    + LOGO +
+    '</div><div class="stripe"></div></div>', unsafe_allow_html=True)
 
 # ---------- Model chooser ----------
 with st.container(key="modelcard"):
