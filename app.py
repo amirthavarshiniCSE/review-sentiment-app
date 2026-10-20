@@ -61,7 +61,10 @@ textarea { background: #fffaf0 !important; color: #2a2623 !important; -webkit-te
 textarea::placeholder { color: #9a8f7a !important; -webkit-text-fill-color: #9a8f7a !important; opacity: 1 !important; }
 [data-baseweb="textarea"], [data-baseweb="textarea"] > div { background: #fffaf0 !important; }
 [data-baseweb="select"] div, [data-baseweb="select"] span, [data-baseweb="select"] input { color: #2a2623 !important; -webkit-text-fill-color: #2a2623 !important; }
-[data-testid="stFileUploaderDropzone"] * { color: #3b3a30 !important; }
+[data-testid="stFileUploaderDropzoneInstructions"] * { color: #3b3a30 !important; }
+[data-testid="stFileUploaderDropzone"] button { background: #c0503a !important; border: none !important; border-radius: 8px !important; transition: all .2s ease; }
+[data-testid="stFileUploaderDropzone"] button, [data-testid="stFileUploaderDropzone"] button * { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; fill: #ffffff !important; font-weight: 600; }
+[data-testid="stFileUploaderDropzone"] button:hover { background: #cf5a42 !important; transform: translateY(-1px); box-shadow: 0 0 8px rgba(255,170,90,.9), 0 0 22px rgba(240,120,60,.6); }
 [data-testid="stCaptionContainer"], .stMarkdown, .stMarkdown p, label p { color: #2f2b27; }
 textarea:focus { border-color: #c0503a !important; box-shadow: 0 0 0 2px rgba(192,80,58,.2) !important; }
 
